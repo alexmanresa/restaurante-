@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Mesa — Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">La Mesa</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#reserve">Reservas</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1>Sabores que unen</h1>
+          <p class="lead">Cocina contemporánea con ingredientes locales y un toque creativo.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#menu">Ver menú</a>
+            <a class="btn" href="#reserve">Reservar mesa</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="container section">
+        <h2 class="section-title">Nuestro menú</h2>
+        <p class="section-sub">Platos pensados para compartir y disfrutar.</p>
+
+        <div class="grid menu-grid">
+          <article class="card">
+            <div class="card-media" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Tartar de salmón</h3>
+              <p class="muted">Con aguacate, cítricos y toques de sésamo.</p>
+              <div class="card-footer">
+                <span class="price">$12.50</span>
+                <button class="btn btn-ghost">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media" style="background:linear-gradient(135deg,#f6d365,#fda085)" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Risotto de setas</h3>
+              <p class="muted">Arroz cremoso con hongos de temporada y parmesano.</p>
+              <div class="card-footer">
+                <span class="price">$14.00</span>
+                <button class="btn btn-ghost">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Burger Gourmet</h3>
+              <p class="muted">Pan casero, carne seleccionada y queso fundido.</p>
+              <div class="card-footer">
+                <span class="price">$11.00</span>
+                <button class="btn btn-ghost">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media" style="background:linear-gradient(135deg,#89f7fe,#66a6ff)" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Ensalada mediterránea</h3>
+              <p class="muted">Tomate, aceitunas, queso feta y vinagreta de hierbas.</p>
+              <div class="card-footer">
+                <span class="price">$9.50</span>
+                <button class="btn btn-ghost">Pedir</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="container section about">
+        <div class="about-inner">
+          <div>
+            <h2>Sobre La Mesa</h2>
+            <p>Somos un equipo pequeño que busca ofrecer platos con ingredientes seleccionados, técnicas modernas y una experiencia cálida. Reservas rápidas y menús rotativos según temporada.</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>8</strong><span>Años</span></div>
+            <div class="stat"><strong>120+</strong><span>Platos</span></div>
+            <div class="stat"><strong>4.8</strong><span>Valoración</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reserve" class="container section reserve">
+        <h2 class="section-title">Reserva tu mesa</h2>
+        <form id="reservationForm" class="form-grid" novalidate>
+          <label>
+            Nombre
+            <input type="text" name="name" required placeholder="Tu nombre">
+          </label>
+          <label>
+            Personas
+            <input type="number" name="people" min="1" value="2" required>
+          </label>
+          <label>
+            Fecha
+            <input type="date" name="date" required>
+          </label>
+          <label>
+            Hora
+            <input type="time" name="time" required>
+          </label>
+          <label class="full">
+            Notas (opcional)
+            <textarea name="notes" rows="3" placeholder="Ej.: alergias, celebración..."></textarea>
+          </label>
+          <div class="form-actions full">
+            <button class="btn btn-primary" type="submit">Reservar</button>
+            <button class="btn btn-ghost" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="contact" class="container section contact">
+        <h2 class="section-title">Contacto</h2>
+        <p>Dirección: Calle Falsa 123 · Ciudad · Tel: (555) 123-456</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> La Mesa. Todos los derechos reservados.</p>
+        <nav aria-label="Redes sociales">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="action.js" defer></script>
+  </body>
+</html>

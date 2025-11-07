@@ -1,0 +1,92 @@
+:root{
+  --bg:#fbfbfd;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#ff6b6b;
+  --accent-2:#6b8bff;
+  --text:#0f172a;
+  --glass: rgba(255,255,255,0.6);
+  --radius:12px;
+  --shadow: 0 6px 20px rgba(15,23,42,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#f6f7fb);
+  color:var(--text);
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.65));border-bottom:1px solid rgba(15,23,42,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
+.site-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.site-nav a{text-decoration:none;color:var(--muted);padding:0.4rem 0.6rem;border-radius:8px}
+.site-nav a:hover{color:var(--text);background:var(--glass)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.2rem}
+
+/* Hero */
+.hero{padding:3.5rem 0;background:linear-gradient(135deg, rgba(255,107,107,0.08), rgba(107,139,255,0.06));border-radius:16px;margin:1.5rem 0}
+.hero-inner{text-align:center;padding:3rem 1rem}
+.hero h1{font-size:2.2rem;margin:0 0 0.5rem}
+.lead{color:var(--muted);margin:0 auto 1.25rem;max-width:700px}
+.hero-ctas{display:flex;gap:0.75rem;justify-content:center}
+
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;border:0;background:transparent;cursor:pointer;text-decoration:none;color:var(--text);box-shadow:none}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--text)}
+
+/* Sections */
+.section{padding:2rem 0}
+.section-title{font-size:1.25rem;margin:0 0 0.25rem}
+.section-sub{color:var(--muted);margin-bottom:1rem}
+
+/* Menu grid */
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card-media{height:120px;background:linear-gradient(135deg,#ffdca1,#ffe2d6)}
+.card-body{padding:1rem;display:flex;flex-direction:column;gap:0.5rem}
+.muted{color:var(--muted);font-size:0.95rem}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem}
+.price{font-weight:600}
+
+/* About */
+.about-inner{display:flex;gap:1.5rem;align-items:center}
+.stats{display:flex;gap:1rem}
+.stat{background:var(--card);padding:0.75rem;border-radius:10px;text-align:center;box-shadow:var(--shadow)}
+.stat strong{display:block;font-size:1.1rem}
+
+/* Reserve form */
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem}
+.form-grid label{display:flex;flex-direction:column;font-size:0.95rem}
+.form-grid input,.form-grid textarea{padding:0.6rem;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:white}
+.form-grid .full{grid-column:1/-1}
+.form-actions{display:flex;gap:0.5rem}
+
+/* Footer */
+.site-footer{padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+/* Toast */
+.toast{position:fixed;right:1rem;bottom:1rem;background:#0f172a;color:white;padding:0.75rem 1rem;border-radius:10px;box-shadow:var(--shadow)}
+
+/* Responsive */
+@media (max-width:880px){
+  .menu-grid{grid-template-columns:1fr}
+  .about-inner{flex-direction:column}
+  .form-grid{grid-template-columns:1fr}
+  .site-nav{position:absolute;top:64px;right:1rem;background:transparent}
+  .nav-toggle{display:inline-block}
+  .site-nav ul{flex-direction:column;background:var(--card);padding:0.5rem;border-radius:10px;box-shadow:var(--shadow)}
+}
+
+@media (max-width:520px){
+  .hero h1{font-size:1.6rem}
+}
